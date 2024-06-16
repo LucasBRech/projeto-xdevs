@@ -10,7 +10,7 @@ btnAvancar.addEventListener("click", function () {
     if (cartaoAtual === cartoes.length - 1) return;
 
     //passo 4 - bruscar o cartão que esta selecionado e esconder
-    esconderCardsSelecionado();
+    esconderCardSelecionado();
     // passo 3 - fazer aparecer o proximo cartão da lista
     cartaoAtual++;
     mostrarCard();
@@ -19,7 +19,7 @@ btnAvancar.addEventListener("click", function () {
 btnVoltar.addEventListener("click", function () {
     if (cartaoAtual === 0) return;
 
-    esconderCardsSelecionado()
+    esconderCardSelecionado()
     // passo 3 - fazer aparecer o proximo cartão da lista
     cartaoAtual--;
     cartoes[cartaoAtual].classList.add("selecionado");
@@ -31,7 +31,7 @@ function mostrarCard() {
     cartoes[cartaoAtual].classList.add("selecionado");
 }
 
-function esconderCardsSelecionado() {
+function esconderCardSelecionado() {
     const cartaoSelecionado = document.querySelector(".selecionado"); cartaoSelecionado.classList.remove("selecionado");
 }
 
